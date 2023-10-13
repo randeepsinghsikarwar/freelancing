@@ -1,0 +1,6 @@
+Product Code	Description	Price
+22140		stove		100
+54312		dishwasher		75
+60000		freezer		45
+2000		watch		69
+10000000		ship		444

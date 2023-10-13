@@ -1,0 +1,3 @@
+    void writeInventory(ostream file){
+
+    }
