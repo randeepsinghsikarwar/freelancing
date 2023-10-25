@@ -7,14 +7,14 @@ const int arrSize = 10;
 
 struct ProductRec{
     int productCode;
-    string description;
+    std::string description;
     double price;
 };
 
 int loadArray(ProductRec *arr){
     fstream file;
         int i = 0;
-    file.open("inventory.dat",ios::in);
+    file.open("Inventory.dat",ios::in);
     if(!file.is_open()){
         cout<<"not"<<endl;
         return 0;
@@ -46,6 +46,7 @@ void showArray(ProductRec *arr, int i){
         for(int j = 0;j<i;j++){
             outputFile<<arr[j].productCode<<"\t\t"<<arr[j].description<<"\t\t"<<arr[j].price<<endl;
         }
+    outputFile<<"working";
     }
     outputFile.close();
 
@@ -56,5 +57,6 @@ int main(){
     int arrLen = loadArray(arr);
     showArray(arr, arrLen);
     system("type product.txt");
+    system("pause");
 
 }
