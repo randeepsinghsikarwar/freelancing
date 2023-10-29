@@ -24,7 +24,7 @@ int main()
 {
      cout << "Inventory object examples from Inventory.data file:" << endl
           << endl;
-     Inventory company("Inventory.data", 15);
+     Inventory company("inventory.data", 15);
      cout << "\nNumber of products = "
           << company.getNoProducts() << endl;
      cout << "printing all products in Inventory.data to the screen:\n\n";

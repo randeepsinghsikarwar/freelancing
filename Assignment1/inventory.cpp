@@ -1,4 +1,6 @@
 #include "inventory.h"
+using namespace std;
+
 
 int Inventory::searchProduct(int code)
 {
@@ -13,21 +15,21 @@ int Inventory::searchProduct(int code)
     return i;
 }
 
-Inventory::Inventory(std::string fileName, int maximum_products)
+Inventory::Inventory(string fileName, int maximum_products)
 {
     maximum_products <= 25 ? this->maximum_products = maximum_products : maximum_products = 25;
 
-    std::fstream file;
+    fstream file;
     int i = 0;
     file.open(fileName);
     if (!file.is_open())
     {
-        std::cout << "failed to open the file" << std::endl;
+        cout << "failed to open the file" << endl;
     }
     else
     {
         int code;
-        std::string desc;
+        string desc;
         double product_price;
 
         while ((file >> code >> desc >> product_price) && i < this->maximum_products)
@@ -49,21 +51,21 @@ void Inventory::showProduct(int code)
     {
         if (products[i].product_code == code)
         {
-            std::cout << code << " " << products[i].product_description << " " << products[i].product_price << std::endl;
+            cout << code << " " << products[i].product_description << " " << products[i].product_price << endl;
             return;
         }
     }
-    std::cout << "product not found!" << std::endl;
+    cout << "product not found!" << endl;
 }
 
-void Inventory::writeInventory(std::ostream &out)
+void Inventory::writeInventory(ostream &out)
 {
-    out << "Product Code\t\tDescription\t\tPrice" << std::endl;
+    out << "Product Code\t\tDescription\t\tPrice" << endl;
     for (int i = 0; i < number_of_products; i++)
     {
-        out << products[i].product_code << "\t\t" << products[i].product_description << "\t\t" << products[i].product_price << std::endl;
+        out << products[i].product_code << "\t\t" << products[i].product_description << "\t\t" << products[i].product_price << endl;
     }
-    out << "Number of products in the array: " << number_of_products << std::endl;
+    out << "Number of products in the array: " << number_of_products << endl;
 }
 
 int Inventory::getNoProducts()
@@ -83,12 +85,12 @@ void Inventory::increasePrice(int code, double product_price)
             }
             else
             {
-                std::cout << "The maximum product_price of $1000 was assigned" << std::endl;
+                cout << "The maximum product_price of $1000 was assigned" << endl;
                 products[i].product_price = 1000;
             }
             return;
         }
     }
-    std::cout << "product does not exist in the data" << std::endl;
+    cout << "product does not exist in the data" << endl;
 }
 
