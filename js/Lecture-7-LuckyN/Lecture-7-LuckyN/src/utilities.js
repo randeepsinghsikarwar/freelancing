@@ -1,0 +1,9 @@
+function getRolls(n) {
+  return Array.from({ length: n }, () => Math.ceil(Math.random() * 6));
+}
+
+function sum(nums) {
+  return nums.reduce((prev, cur) => prev + cur, 0);
+}
+
+export { getRolls, sum };

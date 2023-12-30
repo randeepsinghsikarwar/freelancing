@@ -1,0 +1,60 @@
+const listings = [
+  {
+    id: 1,
+    pic: "",
+    country: "Indonesia",
+    location: "Gili Air Hotel",
+    rating: 4.8,
+    price: 589,
+  },
+  {
+    id: 2,
+    pic: "",
+    country: "Seychelles",
+    location: "Hilton Resort",
+    rating: 4.2,
+    price: 629,
+  },
+  {
+    id: 3,
+    pic: "",
+    country: "US Virgin Islands",
+    location: "Goa Resort",
+    rating: 3.5,
+    price: 485,
+  },
+  {
+    id: 4,
+    pic: "",
+    country: "Bahamas",
+    location: "Kuredu Resort",
+    rating: 4.2,
+    price: 729,
+  },
+  {
+    id: 5,
+    pic: "",
+    country: "Mauritius",
+    location: "Tour D'eau Douce",
+    rating: 4.9,
+    price: 877,
+  },
+  {
+    id: 6,
+    pic: "",
+    country: "Bermuda",
+    location: "Staniel Cay Hotel",
+    rating: 3.2,
+    price: 365,
+  },
+  {
+    id: 7,
+    pic: "",
+    country: "France",
+    location: "Trou-Aux-Biches",
+    rating: 3.3,
+    price: 499,
+  },
+];
+
+export default listings;
