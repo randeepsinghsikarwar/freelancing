@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Northend</title>
+    
+</head>
+<body>
+    
+    <a href="/"> <img src="./images/cornwall-realtor-logo.jpg" alt="" width="60px" /></a>
+    <a href="/downtown"> Downtown</a>
+    <a href="/northend"> Northend</a>
+    <a href="/riverdale"> Riverdale</a>
+
+    <a href="/eastend"> Eastend</a>
+    <h1> Welcome to Northend</h1> 
+
+    <form action="/northend" method="GET" >
+        <button name="sort" value="ascendingly">Sort Price ascendingly</button>
+        <button name="sort" value="decendingly">Sort Price decendingly</button>
+    </form>
+    
+    <br>
+    
+    <% for (let i = 0; i < northend.length; i++) { %>
+        <img src="<%= northend[i].image %>" alt="" width="200px"><br>
+         <p><strong><%= northend[i].address  %></strong></p>
+         <p>Price: <%= northend[i].price %></p>
+         <form action="/northend/<%=northend[i].id%>" method="get">
+            <button type="submit">Visit Listing</button>
+         </form>
+      <% } %>
+    
+</body>
+</html>

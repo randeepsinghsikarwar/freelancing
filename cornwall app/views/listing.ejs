@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= listing.address %> - <%= neighbourhood %> Listing</title>
+</head>
+<body> 
+    <a href="/"> <img src="/images/cornwall-realtor-logo.jpg" alt="logo" width="60px" /></a>
+    <a href="/downtown"> Downtown</a>
+    <a href="/northend"> Northend</a>
+    <a href="/eastend"> Eastend</a>
+    <a href="/riverdale"> Riverdale</a><br>
+
+    <img src="<%=listing.image%>" alt="" width="30%"/>
+
+    <h1><%= listing.address %> </h1>
+
+    <h4>Price: <%= listing.price%></h4>
+    <h2>Details</h2>
+    <ul>
+        <li>Postal Code: <%=listing.postalCode%></li>
+        <li>MLS: <%=listing.MLSnumber%></li>
+        <li>Description: <%=listing.description%></li>
+    </ul>
+
+    <h2>Property Summary</h2>
+    <ul>
+        <% Object.entries(listing.propertySummary).forEach(([key, value]) => { %>
+            <li><%= key.charAt(0).toUpperCase() + key.slice(1) %>: <%= value %></li>
+        <% }); %>
+    </ul>
+
+    <h2>Building Summary</h2>
+    <ul>
+        <% Object.entries(listing.buildingSummary).forEach(([key, value]) => { %>
+            <li><%= key.charAt(0).toUpperCase() + key.slice(1) %>: <%= value %></li>
+        <% }); %>
+    </ul>
+
+    <a href="/<%= neighbourhood %>">Back</a>
+    <a href="/">Home</a>
+
+</body>
+</html>
